@@ -5,12 +5,12 @@ function Tshirt() {
   return (
     <section className="text-gray-600 body-font">
     <div className="container px-5 pt-5 pb-20 mx-auto">
-      <div className="flex flex-wrap px-10 lg:px-20 space-y-20">
+      <div className="flex flex-wrap lg:px-20 space-y-20">
         <div></div>
 
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={"/product/details"}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={"/product/details"}><img alt="ecommerce" className="w-full h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -20,8 +20,8 @@ function Tshirt() {
         </div>
         
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -30,8 +30,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -40,8 +40,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -50,8 +50,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -60,8 +60,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -70,8 +70,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -80,8 +80,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -90,8 +90,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -100,8 +100,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -110,8 +110,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -120,8 +120,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -130,8 +130,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -140,8 +140,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -150,8 +150,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -160,8 +160,8 @@ function Tshirt() {
           </div>
         </div>
         <div className="w-60 mx-auto">
-          <div className="block relative h-72 rounded overflow-hidden">
-            <Link href={'/product/details'}><img alt="ecommerce" className="w-52 h-full block" src="https://m.media-amazon.com/images/I/61rmFbZ7tTL._AC_UX679_.jpg"/></Link>
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={'/product/details'}><img alt="ecommerce" className="w- h-full block" src="https://static-01.daraz.pk/original/dafc774611f87ff8db4baefa9013bb52.jpg"/></Link>
           </div>
           <div className="mt-4 text-center sm:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
