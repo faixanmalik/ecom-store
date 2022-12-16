@@ -27,13 +27,13 @@ function MyApp({ Component, pageProps }) {
 
   //  saveCart is used to store cart items in local storage of user
   const savecart = (myCart) => {
-    localStorage.setItem("cart", JSON.stringify(myCart))
+    localStorage.setItem("Cart", JSON.stringify(myCart))
 
   //   // function uses to subtotal
-    let subt=0;
-    let keys = Object.keys(cart)
+    let subt = 0;
+    let keys = Object.keys(myCart);
     for (let i = 0; i < keys.length; i++) {
-      subt +=  myCart[keys[i]]["price"] * myCart[keys[i]].qty;
+      subt +=  myCart[keys[i]].price * myCart[keys[i]].qty;
     }
     setSubtotal(subt)
   }
