@@ -89,6 +89,7 @@ function MyApp({ Component, pageProps }) {
   <Component cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal}  {...pageProps} />
   <Footer/>
   </> 
+
 }
 
 export default MyApp
