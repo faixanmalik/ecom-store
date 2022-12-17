@@ -48,30 +48,35 @@ function Navbar({cart, removeFromCart, addToCart, clearCart, subTotal}) {
 
 
 
-            <div   className="">
+            <div className="z-10">
 
               <div ref={ref} className="pt-3 cart rounded-lg absolute top-0 right-0 bg-blue-100 px-7 w-80 h-full transform transition-transform translate-x-full">
                 <h1 className="font-bold text-xl text-center text-blue-800 tracking-wider">Shopping Cart</h1>
                 <span onClick={togglecart} className="absolute top-7 right-5 text-xl"><AiOutlineCloseCircle className="cursor-pointer text-blue-600"/></span>
                 <h1 className="font-bold text-base text-center text-blue-800 tracking-wide">Hunting_Store</h1>
 
-                <div>
-                  
-                  <ol className="pt-7 list-decimal font-medium text-red-800 space-y-2">
 
+                <div>
+                  <ol className="pt-7 list-decimal font-medium text-red-800 space-y-2">
                     {Object.keys(cart).length == 0 && <div>Your Cart is Empty</div> }
                     {Object.keys(cart).map((k)=>{ return <li key={k} className="text-lg">
                       <div className="flex justify-between">
                         <div className="w-1/2 overflow-hidden">{cart[k].name}</div>
                           <div className="bg-slate-100 flex text-blue-800 font-bold text-center px-2"><AiFillMinusCircle onClick={()=>{removeFromCart(k,cart[k].name,1,cart[k].price,cart[k].size,cart[k].variant)}} className='my-auto cursor-pointer'/> <span className='mx-3'>{cart[k].qty}</span> <AiFillPlusCircle onClick={()=>{addToCart(k,cart[k].name,1,cart[k].price,cart[k].size,cart[k].variant)}} className='my-auto cursor-pointer'/> </div>
                       </div>
+
+                      <div>
+                        <button onClick={subTotal} className='px-5 py-2 rounded'>SubTotal: ${subTotal}</button>
+                      </div>
                     </li>})}
+
+                    
                   
 
                   </ol>
 
                   <div className='flex space-x-3 pt-20'>
-                    <button className='bg-blue-600 px-5 py-2 rounded text-white'>Checkout</button>
+                    <Link href={"/checkout"}><button className='bg-blue-600 px-5 py-2 rounded text-white'>Checkout</button></Link>
                     <button onClick={clearCart} className='bg-blue-600 px-5 py-2 rounded text-white'>Clear Cart</button>
                     
                   </div>

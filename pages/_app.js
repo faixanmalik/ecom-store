@@ -6,7 +6,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
 
   let [cart, setCart] = useState({})
-  let [subtotal, setSubtotal] = useState(0)
+  let [subTotal, setSubTotal] = useState(0)
 
 
 
@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
     try {
       if (localStorage.getItem("cart")) {
         setCart(JSON.parse(localStorage.getItem("cart")));
+        saveCart(JSON.parse(localStorage.getItem("cart")));
       }
     } catch (error) {
       console.error(error);
@@ -26,8 +27,8 @@ function MyApp({ Component, pageProps }) {
 
 
   //  saveCart is used to store cart items in local storage of user
-  const savecart = (myCart) => {
-    localStorage.setItem("Cart", JSON.stringify(myCart))
+  const saveCart = (myCart) => {
+    localStorage.setItem("cart", JSON.stringify(myCart))
 
   //   // function uses to subtotal
     let subt = 0;
@@ -35,7 +36,7 @@ function MyApp({ Component, pageProps }) {
     for (let i = 0; i < keys.length; i++) {
       subt +=  myCart[keys[i]].price * myCart[keys[i]].qty;
     }
-    setSubtotal(subt)
+    setSubTotal(subt)
   }
 
 
@@ -49,7 +50,7 @@ function MyApp({ Component, pageProps }) {
       newCart[itemCode]= {qty:1, name, price, size, variant}   
     }
     setCart(newCart);
-    savecart(newCart);
+    saveCart(newCart);
   }
 
 
@@ -65,7 +66,7 @@ function MyApp({ Component, pageProps }) {
       delete newCart[itemCode];
      }
     setCart(newCart);
-    savecart(newCart);
+    saveCart(newCart);
   } 
 
 
@@ -74,7 +75,7 @@ function MyApp({ Component, pageProps }) {
   // clear cart is used to clear all items in cart
   const clearCart = () => {
     setCart({})
-    savecart({})
+    saveCart({})
   }
 
 
@@ -85,8 +86,8 @@ function MyApp({ Component, pageProps }) {
 
 
   return <>
-  <Navbar cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal} />
-  <Component cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal}  {...pageProps} />
+  <Navbar cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} />
+  <Component cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal}  {...pageProps} />
   <Footer/>
   </> 
 
