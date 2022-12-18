@@ -30,7 +30,7 @@ function Navbar({cart, removeFromCart, addToCart, clearCart, subTotal}) {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
-            <span className="ml-3 text-2xl font-bold text-blue-800">Hunting_Coder</span>
+            <span className="ml-3 text-2xl font-bold text-blue-800">Hunting_Store</span>
             </a>
             <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-lg md:text-xl justify-center list-none space-x-8 md:space-x-3 lg:space-x-8">
               <Link href={"/"}><li>Home</li></Link> 
