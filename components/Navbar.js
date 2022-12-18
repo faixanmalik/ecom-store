@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRef } from 'react';
-import { AiOutlineShoppingCart,AiOutlineCloseCircle, AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
+import { AiOutlineShoppingCart,AiOutlineShopping, AiOutlineCloseCircle, AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 
 function Navbar({cart, removeFromCart, addToCart, clearCart, subTotal}) {
 
@@ -45,17 +45,12 @@ function Navbar({cart, removeFromCart, addToCart, clearCart, subTotal}) {
               </div>
             </div>
 
-
-
-
             <div className="z-10">
 
               <div ref={ref} className="pt-3 cart rounded-lg absolute top-0 right-0 bg-blue-100 px-7 w-80 h-full transform transition-transform translate-x-full">
                 <h1 className="font-bold text-xl text-center text-blue-800 tracking-wider">Shopping Cart</h1>
                 <span onClick={togglecart} className="absolute top-7 right-5 text-xl"><AiOutlineCloseCircle className="cursor-pointer text-blue-600"/></span>
-                <h1 className="font-bold text-base text-center text-blue-800 tracking-wide">Hunting_Store</h1>
-
-
+                <h1 className="font-bold text-base text-center text-blue-800 tracking-wide">Hunting_Store</h1> 
                 <div>
                   <ol className="pt-7 list-decimal font-medium text-red-800 space-y-2">
                     {Object.keys(cart).length == 0 && <div>Your Cart is Empty</div> }
@@ -76,7 +71,7 @@ function Navbar({cart, removeFromCart, addToCart, clearCart, subTotal}) {
                   </ol>
 
                   <div className='flex space-x-3 pt-20'>
-                    <Link href={"/checkout"}><button className='bg-blue-600 px-5 py-2 rounded text-white'>Checkout</button></Link>
+                    <Link href={"/checkout"}><button className='bg-blue-600 flex pr-3 py-2 rounded text-white'><AiOutlineShopping className='my-auto mx-2'/>Checkout</button></Link>
                     <button onClick={clearCart} className='bg-blue-600 px-5 py-2 rounded text-white'>Clear Cart</button>
                     
                   </div>
@@ -87,12 +82,6 @@ function Navbar({cart, removeFromCart, addToCart, clearCart, subTotal}) {
 
 
               </div>
-
-
-
-
-
-
 
 
 
