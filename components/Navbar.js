@@ -39,7 +39,7 @@ function Navbar({cart, removeFromCart, addToCart, clearCart, subTotal}) {
               <Link href={"/mugs"}><li>Mugs</li></Link>
             </nav>
             <div className='inline-flex items-center mt-4 md:mt-0 space-x-8 md:space-x-5 lg:space-x-8'>
-              <button className=" bg-blue-700 text-white rounded-xl font-semibold border-0 py-2 px-7 focus:outline-none hover:bg-blue-800 text-base"><Link href={"/login"}>Log in</Link></button>
+              <button className=" bg-blue-700 text-white rounded-xl font-semibold border-0 py-2 px-7 focus:outline-none hover:bg-blue-800 text-base"><Link href={"/signup"}>Sign Up</Link></button>
               <div onClick={togglecart}>
                 <AiOutlineShoppingCart className='text-xl cursor-pointer'/>
               </div>
