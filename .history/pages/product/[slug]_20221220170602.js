@@ -1,7 +1,6 @@
-import { useRouter } from 'next/router'
+import { useRouter , useState } from 'next/router'
 import Product from '../../models/Product';
 import mongoose from "mongoose";
-import { useState } from 'react';
 
 const Slug = ({addToCart , product , variants}) => {
   const router = useRouter()
@@ -9,6 +8,8 @@ const Slug = ({addToCart , product , variants}) => {
 
   const [color, setColor] = useState(product.color)
   const [size, setSize] = useState(product.size)
+
+
 
   return <div>
     <section className="text-gray-600 body-font overflow-hidden">
@@ -65,12 +66,9 @@ const Slug = ({addToCart , product , variants}) => {
                 
                 
                 
-                {Object.keys(variants).includes('white') && <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>}
-                {Object.keys(variants).includes('red') && <button className="border-2 border-gray-300 ml-1 bg-red-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                {Object.keys(variants).includes('black') && <button className="border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none"></button>}
-                {/* {Object.keys(variants).includes('white') && Object.keys(variants['white']).includes(size) && <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>}
+                {Object.keys(variants).includes('white') && Object.keys(variants['white']).includes(size) && <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>}
                 {Object.keys(variants).includes('red') && Object.keys(variants['red']).includes(size) && <button className="border-2 border-gray-300 ml-1 bg-red-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                {Object.keys(variants).includes('black') && Object.keys(variants['black']).includes(size) && <button className="border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none"></button>} */}
+                {Object.keys(variants).includes('black') && Object.keys(variants['black']).includes(size) && <button className="border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none"></button>}
 
 
 
@@ -118,7 +116,7 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URI)
   }
   let product = await Product.findOne({slug: context.query.slug})
-  let variants = await Product.find({title: Product.title})
+  let variants = await Product.find({title: product.title})
 
   let colorSizeSlug = {}
   variants.forEach(item => {

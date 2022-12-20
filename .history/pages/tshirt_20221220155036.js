@@ -37,19 +37,19 @@ export async function getServerSideProps() {
   let tshirts= {}
     for (let item of product){
         if (item.title in tshirts) {
-            if (!tshirts[item.title].color.includes(item.color) && item.avilableQty > 0) {
-                tshirts[item.title].color.push(item.color)
+            if (!tshirts[product[item].title].color.includes(product[item].color) && product[item].avilableQty > 0) {
+                tshirts[product[item].title].color.push(product[item].color)
             }
-            if (!tshirts[item.title].size.includes(item.size) && item.avilableQty > 0) {
-                tshirts[item.title].size.push(item.size)
+            if (!tshirts[product[item].title].size.includes(product[item].size) && product[item].avilableQty > 0) {
+                tshirts[product[item].title].size.push(product[item].size)
             }
         }
         else {
-            // tshirts[item.title] is key and its value is whole object(item)
-            tshirts[item.title] = JSON.parse(JSON.stringify(item))
-            if(item.avilableQty > 0) {
-                tshirts[item.title].color = [item.color]
-                tshirts[item.title].size = [item.size]
+            // tshirts[product[item].title] is key and its value is whole object(product[item])
+            tshirts[product[item].title] = JSON.parse(JSON.stringify(product[item]))
+            if(product[item].avilableQty > 0) {
+                tshirts[product[item].title].color = [product[item].color]
+                tshirts[product[item].title].size = [product[item].size]
             }
 
         }

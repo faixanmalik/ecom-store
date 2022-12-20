@@ -67,7 +67,7 @@ const Slug = ({addToCart , product , variants}) => {
                 
                 {Object.keys(variants).includes('white') && <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>}
                 {Object.keys(variants).includes('red') && <button className="border-2 border-gray-300 ml-1 bg-red-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                {Object.keys(variants).includes('black') && <button className="border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none"></button>}
+                {Object.keys(color).includes('black') && <button className="border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none"></button>}
                 {/* {Object.keys(variants).includes('white') && Object.keys(variants['white']).includes(size) && <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>}
                 {Object.keys(variants).includes('red') && Object.keys(variants['red']).includes(size) && <button className="border-2 border-gray-300 ml-1 bg-red-700 rounded-full w-6 h-6 focus:outline-none"></button>}
                 {Object.keys(variants).includes('black') && Object.keys(variants['black']).includes(size) && <button className="border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none"></button>} */}

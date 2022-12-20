@@ -10,7 +10,7 @@ function Tshirt({ product }) {
       <div className="flex flex-wrap lg:px-16 space-y-20">
         <div></div>
 
-        {Object.keys(product).map((item)=>{
+        {Object.keys(product).map((product[item])=>{
           return <div key={product[item]._id} className="mx-auto">
               <Link href={`/product/${product[item].slug}`}><img alt="ecommerce" className="w-full h-72 block" src={product[item].img}/></Link>
               <div className="mt-4 text-center sm:text-left">
@@ -18,7 +18,7 @@ function Tshirt({ product }) {
                 <h2 className="text-gray-900 title-font text-lg font-medium">Lets enjoy!</h2>
                 <p className="mt-1">${product[item].price}</p>
               </div>
-          </div>})} 
+          </div>})}
 
 
       </div>
@@ -35,21 +35,21 @@ export async function getServerSideProps() {
   let product = await Product.find({category: 'tshirts'})
 
   let tshirts= {}
-    for (let item of product){
-        if (item.title in tshirts) {
-            if (!tshirts[item.title].color.includes(item.color) && item.avilableQty > 0) {
-                tshirts[item.title].color.push(item.color)
+    for (let product[item] of product){
+        if (product[item].title in tshirts) {
+            if (!tshirts[product[item].title].color.includes(product[item].color) && product[item].avilableQty > 0) {
+                tshirts[product[item].title].color.push(product[item].color)
             }
-            if (!tshirts[item.title].size.includes(item.size) && item.avilableQty > 0) {
-                tshirts[item.title].size.push(item.size)
+            if (!tshirts[product[item].title].size.includes(product[item].size) && product[item].avilableQty > 0) {
+                tshirts[product[item].title].size.push(product[item].size)
             }
         }
         else {
-            // tshirts[item.title] is key and its value is whole object(item)
-            tshirts[item.title] = JSON.parse(JSON.stringify(item))
-            if(item.avilableQty > 0) {
-                tshirts[item.title].color = [item.color]
-                tshirts[item.title].size = [item.size]
+            // tshirts[product[item].title] is key and its value is whole object(product[item])
+            tshirts[product[item].title] = JSON.parse(JSON.stringify(product[item]))
+            if(product[item].avilableQty > 0) {
+                tshirts[product[item].title].color = [product[item].color]
+                tshirts[product[item].title].size = [product[item].size]
             }
 
         }

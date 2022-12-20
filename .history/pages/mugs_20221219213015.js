@@ -37,6 +37,7 @@ export async function getServerSideProps() {
   }
   let product = await Product.find({category: 'mugs'})
 
+ 
   // Pass data to the page via props
   return {
      props: { product: JSON.parse(JSON.stringify(product)) } 

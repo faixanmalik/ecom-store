@@ -1,19 +1,18 @@
 import { useRouter } from 'next/router'
 import Product from '../../models/Product';
 import mongoose from "mongoose";
-import { useState } from 'react';
 
-const Slug = ({addToCart , product , variants}) => {
+const Slug = ({addToCart , product}) => {
   const router = useRouter()
   const { slug } = router.query
-
-  const [color, setColor] = useState(product.color)
-  const [size, setSize] = useState(product.size)
 
   return <div>
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto justify-center flex flex-wrap">
+
+
+
 
 
           
@@ -62,25 +61,15 @@ const Slug = ({addToCart , product , variants}) => {
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
               <div className="flex">
                 <span className="mr-3">Color</span>
-                
-                
-                
-                {Object.keys(variants).includes('white') && <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>}
-                {Object.keys(variants).includes('red') && <button className="border-2 border-gray-300 ml-1 bg-red-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                {Object.keys(variants).includes('black') && <button className="border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none"></button>}
-                {/* {Object.keys(variants).includes('white') && Object.keys(variants['white']).includes(size) && <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>}
-                {Object.keys(variants).includes('red') && Object.keys(variants['red']).includes(size) && <button className="border-2 border-gray-300 ml-1 bg-red-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                {Object.keys(variants).includes('black') && Object.keys(variants['black']).includes(size) && <button className="border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none"></button>} */}
-
-
-
-
+                <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
+                <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
+                <button className="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
               </div>
               <div className="flex ml-6 items-center">
                 <span className="mr-3">Size</span>
                 <div className="relative">
                   <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
-                    <option>S</option>
+                    <option>SM</option>
                     <option>M</option>
                     <option>L</option>
                     <option>XL</option>
@@ -118,7 +107,7 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URI)
   }
   let product = await Product.findOne({slug: context.query.slug})
-  let variants = await Product.find({title: Product.title})
+  let variants = await Product.find({title: product.title})
 
   let colorSizeSlug = {}
   variants.forEach(item => {
@@ -132,9 +121,32 @@ export async function getServerSideProps(context) {
   });
 
 
+
+  let tshirts= {}
+    for (let item of product){
+        if (item.title in tshirts) {
+            if (!tshirts[item.title].color.includes(item.color) && item.avilableQty > 0) {
+                tshirts[item.title].color.push(item.color)
+            }
+            if (!tshirts[item.title].size.includes(item.size) && item.avilableQty > 0) {
+                tshirts[item.title].size.push(item.size)
+            }
+        }
+        else {
+            // tshirts[item.title] is key and its value is whole object(item)
+            tshirts[item.title] = JSON.parse(JSON.stringify(item))
+            if(item.avilableQty > 0) {
+                tshirts[item.title].color = [item.color]
+                tshirts[item.title].size = [item.size]
+            }
+
+        }
+    };
+
+
   // Pass data to the page via props
   return {
-     props: { product: JSON.parse(JSON.stringify(product)), variants: JSON.parse(JSON.stringify(colorSizeSlug)) } 
+     props: { product: JSON.parse(JSON.stringify(tshirts)) } 
     }
 }
 export default Slug

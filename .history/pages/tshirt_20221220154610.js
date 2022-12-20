@@ -10,15 +10,15 @@ function Tshirt({ product }) {
       <div className="flex flex-wrap lg:px-16 space-y-20">
         <div></div>
 
-        {Object.keys(product).map((item)=>{
-          return <div key={product[item]._id} className="mx-auto">
-              <Link href={`/product/${product[item].slug}`}><img alt="ecommerce" className="w-full h-72 block" src={product[item].img}/></Link>
+        {product.map((item)=>{
+          return <div key={item._id} className="mx-auto">
+              <Link href={`/product/${item.slug}`}><img alt="ecommerce" className="w-full h-72 block" src={item.img}/></Link>
               <div className="mt-4 text-center sm:text-left">
-                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{product[item].title} </h3>
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{item.title} </h3>
                 <h2 className="text-gray-900 title-font text-lg font-medium">Lets enjoy!</h2>
-                <p className="mt-1">${product[item].price}</p>
+                <p className="mt-1">${item.price}</p>
               </div>
-          </div>})} 
+          </div>})}
 
 
       </div>
@@ -35,7 +35,7 @@ export async function getServerSideProps() {
   let product = await Product.find({category: 'tshirts'})
 
   let tshirts= {}
-    for (let item of product){
+    for (let item of products){
         if (item.title in tshirts) {
             if (!tshirts[item.title].color.includes(item.color) && item.avilableQty > 0) {
                 tshirts[item.title].color.push(item.color)

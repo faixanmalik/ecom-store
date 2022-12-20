@@ -3,13 +3,13 @@ import Link from 'next/link'
 import Product from '../models/Product';
 import mongoose from "mongoose";
 
-
-function Mugs({ product }) {
+function Hoodies({ product }) {
   return (
   <section className="text-gray-600 body-font">
     <div className="container px-5 pt-5 pb-20 mx-auto">
       <div className="flex flex-wrap px-10 lg:px-20 space-y-20">
         <div></div>
+
 
         {product.map((item)=>{
         return <div key={item._id} className="w-60 mx-auto">
@@ -23,7 +23,7 @@ function Mugs({ product }) {
           </div>
         </div>})}
         
-        
+
       </div>
     </div>
   </section>
@@ -31,12 +31,14 @@ function Mugs({ product }) {
 }
 
 
+
 export async function getServerSideProps() {
   if (!mongoose.connections[0].readyState){
     await mongoose.connect(process.env.MONGO_URI)
   }
-  let product = await Product.find({category: 'mugs'})
+  let product = await Product.find({category: 'hoodies'})
 
+ 
   // Pass data to the page via props
   return {
      props: { product: JSON.parse(JSON.stringify(product)) } 
@@ -44,4 +46,5 @@ export async function getServerSideProps() {
 }
 
 
-export default Mugs
+
+export default Hoodies

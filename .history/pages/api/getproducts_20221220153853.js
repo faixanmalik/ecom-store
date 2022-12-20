@@ -5,7 +5,7 @@ const handler = async (req,res)=>{
     let products = await Product.find()
 
     let tshirts= {}
-    for (let item of products){
+    for (let item in products){
         if (item.title in tshirts) {
             if (!tshirts[item.title].color.includes(item.color) && item.avilableQty > 0) {
                 tshirts[item.title].color.push(item.color)
