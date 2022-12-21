@@ -52,9 +52,9 @@ function Navbar({cart, removeFromCart, addToCart, clearCart, subTotal , size , v
                   <ol className="pt-7 list-decimal font-medium text-red-800 space-y-2">
                     {Object.keys(cart).length == 0 && <div>Your Cart is Empty</div> }
                     {Object.keys(cart).map((k)=>{ return <li key={k} className="text-lg">
-                      <div className="flex justify-between">
+                      <div className="flex justify-around">
                         <div className="w-1/2 overflow-hidden">{cart[k].name} ({cart[k].size}/{cart[k].variant})</div>
-                        <div className="bg-slate-100 flex text-blue-800 h-8 font-bold text-center px-2"><AiFillMinusCircle onClick={()=>{removeFromCart(k,cart[k].name,1,cart[k].price,cart[k].size,cart[k].variant)}} className='my-auto cursor-pointer'/> <span className='mx-3'>{cart[k].qty}</span> <AiFillPlusCircle onClick={()=>{addToCart(k,cart[k].name,1,cart[k].price,cart[k].size,cart[k].variant)}} className='my-auto cursor-pointer'/> </div>
+                        <div className="bg-slate-100 flex text-blue-800 font-bold text-center px-2"><AiFillMinusCircle onClick={()=>{removeFromCart(k,cart[k].name,1,cart[k].price,cart[k].size,cart[k].variant)}} className='my-auto cursor-pointer'/> <span className='mx-3'>{cart[k].qty}</span> <AiFillPlusCircle onClick={()=>{addToCart(k,cart[k].name,1,cart[k].price,cart[k].size,cart[k].variant)}} className='my-auto cursor-pointer'/> </div>
                       </div>
                       <div>
                       </div>

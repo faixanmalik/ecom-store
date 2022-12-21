@@ -11,7 +11,7 @@ function Tshirt({ product }) {
         <div></div>
 
         {Object.keys(product).map((item)=>{
-          return <div key={product[item]._id} className="mx-auto w-64">
+          return <div key={product[item]._id} className="mx-auto">
               <Link href={`/product/${product[item].slug}`}><img alt="ecommerce" className="w-full h-72 block " src={product[item].img}/></Link>
               <div className="mt-4 text-center sm:text-left">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{product[item].title} </h3>

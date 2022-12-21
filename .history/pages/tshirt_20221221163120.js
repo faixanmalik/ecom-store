@@ -7,12 +7,12 @@ function Tshirt({ product }) {
   return (
     <section className="text-gray-600 body-font">
     <div className="container px-5 pt-5 pb-20 mx-auto">
-      <div className="flex flex-wrap lg:px-16 space-y-20">
+      <div className="flex flex-wrap space-y-20">
         <div></div>
 
         {Object.keys(product).map((item)=>{
-          return <div key={product[item]._id} className="mx-auto w-64">
-              <Link href={`/product/${product[item].slug}`}><img alt="ecommerce" className="w-full h-72 block " src={product[item].img}/></Link>
+          return <div key={product[item]._id} className="mx-auto">
+              <Link href={`/product/${product[item].slug}`}><img alt="ecommerce" className="w-full h-72 block" src={product[item].img}/></Link>
               <div className="mt-4 text-center sm:text-left">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{product[item].title} </h3>
                 <h2 className="text-gray-900 title-font text-lg font-medium">Lets enjoy!</h2>
