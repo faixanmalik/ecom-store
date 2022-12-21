@@ -67,10 +67,10 @@ const Slug = ({addToCart , product , variants}) => {
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
               <div className="flex">
                 <span className="mr-3">Color</span>
-                {Object.keys(variants).includes('Yellow') && Object.keys(variants['Yellow']).includes(size) && <button onClick={()=>{refresh(size , 'Yellow')}} className={`border-2 bg-yellow-600 rounded-full w-6 h-6 focus:outline-none ${ color === 'Yellow' ? 'border-black' : 'border-gray-300' }`}></button>}
-                {Object.keys(variants).includes('Green') && Object.keys(variants['Green']).includes(size) && <button onClick={()=>{refresh(size , 'Green')}} className={`border-2 ml-1 bg-green-700 rounded-full w-6 h-6 focus:outline-none ${ color === 'Green' ? 'border-black' : 'border-gray-300' }`}></button>}
-                {Object.keys(variants).includes('Black') && Object.keys(variants['Black']).includes(size) && <button onClick={()=>{refresh(size , 'Black')}} className={`border-2 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none ${ color === 'Black' ? 'border-black' : 'border-gray-300' }`}></button>}
-                {Object.keys(variants).includes('Blue') && Object.keys(variants['Blue']).includes(size) && <button onClick={()=>{refresh(size , 'Blue')}} className={`border-2 ml-1 bg-blue-700 rounded-full w-6 h-6 focus:outline-none ${ color === 'Blue' ? 'border-black' :'border-gray-300' }`}></button>}
+                {Object.keys(variants).includes('Yellow') && Object.keys(variants['Yellow']).includes(size) && <button onClick={(size)=>{refresh(size , 'yellow')}} className={`border-2 bg-yellow-600 rounded-full w-6 h-6 focus:outline-none ${ color === 'Yellow' ? 'border-black' : 'border-gray-300' }`}></button>}
+                {Object.keys(variants).includes('Green') && Object.keys(variants['Green']).includes(size) && <button onClick={(size)=>{refresh(size , 'green')}} className={`border-2 ml-1 bg-green-700 rounded-full w-6 h-6 focus:outline-none ${ color === 'Green' ? 'border-black' : 'border-gray-300' }`}></button>}
+                {Object.keys(variants).includes('Black') && Object.keys(variants['Black']).includes(size) && <button onClick={(size)=>{refresh(size , 'black')}} className={`border-2 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none ${ color === 'Black' ? 'border-black' : 'border-gray-300' }`}></button>}
+                {Object.keys(variants).includes('Blue') && Object.keys(variants['Blue']).includes(size) && <button onClick={(size)=>{refresh(size , 'blue')}} className={`border-2 ml-1 bg-blue-700 rounded-full w-6 h-6 focus:outline-none ${ color === 'Blue' ? 'border-black' :'border-gray-300' }`}></button>}
               </div>
               <div className="flex ml-6 items-center">
                 <span className="mr-3">Size</span>
