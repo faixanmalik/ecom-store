@@ -31,10 +31,10 @@ function Navbar({cart, removeFromCart, addToCart, clearCart, subTotal , size , v
             <span className="ml-3 text-2xl font-bold text-blue-800">Hunting_Store</span>
             </a>
             <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-lg md:text-xl justify-center list-none space-x-8 md:space-x-3 lg:space-x-8">
-              <Link href={"/"}><li className='hover:text-blue-700 hover:font-semibold'>Home</li></Link> 
-              <Link href={"/tshirt"}><li className='hover:text-blue-700 hover:font-semibold'>T-Shirts</li></Link> 
-              <Link href={"/hoodies"}><li className='hover:text-blue-700 hover:font-semibold'>Hoodies</li></Link>
-              <Link href={"/mugs"}><li className='hover:text-blue-700 hover:font-semibold'>Mugs</li></Link>
+              <Link href={"/"}><li>Home</li></Link> 
+              <Link href={"/tshirt"}><li>T-Shirts</li></Link> 
+              <Link href={"/hoodies"}><li>Hoodies</li></Link>
+              <Link href={"/mugs"}><li>Mugs</li></Link>
             </nav>
             <div className='inline-flex items-center mt-4 md:mt-0 space-x-8 md:space-x-5 lg:space-x-8'>
               <button className=" bg-blue-700 text-white rounded-xl font-semibold border-0 py-2 px-7 focus:outline-none hover:bg-blue-800 text-base"><Link href={"/signup"}>Sign Up</Link></button>
