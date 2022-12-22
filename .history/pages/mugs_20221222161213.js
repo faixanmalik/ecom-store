@@ -37,24 +37,24 @@ export async function getServerSideProps() {
   if (!mongoose.connections[0].readyState){
     await mongoose.connect(process.env.MONGO_URI)
   }
-  let products = await Product.find({category: 'mugs'})
+  let products = await Product.find({category: 'tshirts'})
 
-  let mugs= {}
+  let tshirts= {}
     for (let item of products){
         if (item.title in tshirts) {
-            if (!mugs[item.title].color.includes(item.color) && item.avilableQty > 0) {
-                mugs[item.title].color.push(item.color)
+            if (!tshirts[item.title].color.includes(item.color) && item.avilableQty > 0) {
+                tshirts[item.title].color.push(item.color)
             }
-            if (!mugs[item.title].size.includes(item.size) && item.avilableQty > 0) {
-                mugs[item.title].size.push(item.size)
+            if (!tshirts[item.title].size.includes(item.size) && item.avilableQty > 0) {
+                tshirts[item.title].size.push(item.size)
             }
         }
         else {
-            // mugs[item.title] is key and its value is whole object(item)
-            mugs[item.title] = JSON.parse(JSON.stringify(item))
+            // tshirts[item.title] is key and its value is whole object(item)
+            tshirts[item.title] = JSON.parse(JSON.stringify(item))
             if(item.avilableQty > 0) {
-                mugs[item.title].color = [item.color]
-                mugs[item.title].size = [item.size]
+                tshirts[item.title].color = [item.color]
+                tshirts[item.title].size = [item.size]
             }
 
         }

@@ -16,8 +16,7 @@ const Slug = ({addToCart , product , variants}) => {
   const [color, setColor] = useState(product.color)
   const [size, setSize] = useState(product.size)
 
-  // React tostify
-  const addcart = () => toast.success("Item is added in your Cart.!");
+  // const notify = () => toast("Wow so easy!");
 
 
   const refresh = ( newSize , newColor ) => {
@@ -86,7 +85,6 @@ const Slug = ({addToCart , product , variants}) => {
                     {Object.keys(variants[color]).includes('M') && <option value={'M'}>M</option>}
                     {Object.keys(variants[color]).includes('L') && <option value={'L'}>L</option>}
                     {Object.keys(variants[color]).includes('XL') && <option value={'XL'}>XL</option>}
-                    {Object.keys(variants[color]).includes('XXL') && <option value={'XXL'}>XXL</option>}
                   </select>
                   <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4" viewBox="0 0 24 24">
@@ -98,7 +96,7 @@ const Slug = ({addToCart , product , variants}) => {
             </div>
             <div className="flex">
               <span className="title-font font-medium text-2xl text-gray-900">${product.price}</span>
-              <button onClick={()=>{ addcart() , addToCart(slug, product.title , 1 , product.price, size, color )}} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
+              <button onClick={()=>{ addToCart(slug, product.title , 1 , product.price, size, color )}} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
               <ToastContainer position="bottom-center" autoClose={2000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light"/>
 
               {/* Wishlist */}

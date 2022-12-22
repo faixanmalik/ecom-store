@@ -37,36 +37,11 @@ export async function getServerSideProps() {
   if (!mongoose.connections[0].readyState){
     await mongoose.connect(process.env.MONGO_URI)
   }
-  let products = await Product.find({category: 'mugs'})
+  let product = await Product.find({category: 'mugs'})
 
-  let mugs= {}
-    for (let item of products){
-        if (item.title in tshirts) {
-            if (!mugs[item.title].color.includes(item.color) && item.avilableQty > 0) {
-                mugs[item.title].color.push(item.color)
-            }
-            if (!mugs[item.title].size.includes(item.size) && item.avilableQty > 0) {
-                mugs[item.title].size.push(item.size)
-            }
-        }
-        else {
-            // mugs[item.title] is key and its value is whole object(item)
-            mugs[item.title] = JSON.parse(JSON.stringify(item))
-            if(item.avilableQty > 0) {
-                mugs[item.title].color = [item.color]
-                mugs[item.title].size = [item.size]
-            }
-
-        }
-    };
-
-
-
-
- 
   // Pass data to the page via props
   return {
-     props: { product: JSON.parse(JSON.stringify(mugs)) } 
+     props: { product: JSON.parse(JSON.stringify(product)) } 
     }
 }
 

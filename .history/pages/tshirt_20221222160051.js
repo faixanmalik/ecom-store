@@ -61,7 +61,7 @@ export async function getServerSideProps() {
  
   // Pass data to the page via props
   return {
-     props: { product: JSON.parse(JSON.stringify(tshirts)) } 
+     props: { product: JSON.parse(JSON.stringify(products)) } 
     }
 }
 
