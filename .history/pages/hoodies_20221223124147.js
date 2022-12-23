@@ -10,16 +10,18 @@ function Hoodies({ product }) {
       <div className="flex flex-wrap px-10 lg:px-20 space-y-20">
         <div></div>
 
-        {Object.keys(product).length === 0 && <div className="font-semibold mx-auto">Sorry! Currently Stock Unavailble right now. Please wait for the new Stock.!</div>}
-        {Object.keys(product).map((item)=>{
-          return <div key={product[item]._id} className="mx-auto w-64">
-              <Link href={`/product/${product[item].slug}`}><img alt="ecommerce" className="w-full h-72 block " src={product[item].img}/></Link>
-              <div className="mt-4 text-center sm:text-left">
-                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{product[item].title} </h3>
-                <h2 className="text-gray-900 title-font text-lg font-medium">Lets enjoy!</h2>
-                <p className="mt-1">${product[item].price}</p>
-              </div>
-          </div>})}   
+        {product.length === 0 && <div className="font-semibold mx-auto">Sorry! Currently Stock Unavailble right now. Please wait for the new Stock.!</div>}
+        {product.map((item)=>{
+        return <div key={item._id} className="w-64 mx-auto">
+          <div className="block h-72 rounded overflow-hidden">
+            <Link href={`/product/${item.slug}`}><img alt="ecommerce" className="w-full h-full block" src={item.img}/></Link>
+          </div>
+          <div className="mt-4 text-center sm:text-left">
+            <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{item.title}</h3>
+            <h2 className="text-gray-900 title-font text-lg font-medium">Lets enjoy!</h2>
+            <p className="mt-1">${item.price}</p>
+          </div>
+        </div>})}
         
 
       </div>

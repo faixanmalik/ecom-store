@@ -5,8 +5,8 @@ const UserSchema = new mongoose.Schema({
     lastname:{type: String, required: true},
     email: {type: String, required: true, unique: true},
     password: {type: String, default: 'Pending', required: true},
-
-  },{timestamps:true});
+  },
+  {timestamps:true});
    
 
 mongoose.models = {}

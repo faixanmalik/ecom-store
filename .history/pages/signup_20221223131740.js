@@ -80,7 +80,6 @@ function Signup() {
               className="bg-gray-100 bg-opacity-50 mb-4 w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 p-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               name="firstname"
               placeholder="First Name"
-              required
             />
             <input
               type="text"
@@ -98,7 +97,6 @@ function Signup() {
               className="bg-gray-100 bg-opacity-50 mb-4 w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 p-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               name="email"
               placeholder="Email"
-              required
             />
 
             <input
@@ -108,7 +106,6 @@ function Signup() {
               className="bg-gray-100 bg-opacity-50 mb-4 w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 p-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               name="password"
               placeholder="Password"
-              required
             />
             <input
               type="password"
@@ -117,7 +114,6 @@ function Signup() {
               className="bg-gray-100 bg-opacity-50 mb-4 w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 p-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               name="confirmpassword"
               placeholder="Confirm Password"
-              required
             />
             <button
               type="submit"

@@ -1,9 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
-
-import { toast, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
 
 function Signup() {
 
@@ -30,17 +27,16 @@ function Signup() {
     })
       .then((response) => response.json())
       .then((data) => {
+        // alert('Thanks for submitted your creditionals! Please Login!');
         setFirstname('')
         setLastname('')
         setEmail('')
         setPassword('')
         setConfirmpassword('')
-        toast.success('Your account has been created.!', { position: "bottom-center", autoClose: 1000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "light", });
 
       })
       .catch((error) => {
         console.error('Error:', error);
-        toast.error('Your account has not been created.!', { position: "bottom-center", autoClose: 1000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "light", });
       });
 
   }
@@ -80,7 +76,6 @@ function Signup() {
               className="bg-gray-100 bg-opacity-50 mb-4 w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 p-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               name="firstname"
               placeholder="First Name"
-              required
             />
             <input
               type="text"
@@ -98,7 +93,6 @@ function Signup() {
               className="bg-gray-100 bg-opacity-50 mb-4 w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 p-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               name="email"
               placeholder="Email"
-              required
             />
 
             <input
@@ -108,7 +102,6 @@ function Signup() {
               className="bg-gray-100 bg-opacity-50 mb-4 w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 p-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               name="password"
               placeholder="Password"
-              required
             />
             <input
               type="password"
@@ -117,7 +110,6 @@ function Signup() {
               className="bg-gray-100 bg-opacity-50 mb-4 w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 p-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               name="confirmpassword"
               placeholder="Confirm Password"
-              required
             />
             <button
               type="submit"
