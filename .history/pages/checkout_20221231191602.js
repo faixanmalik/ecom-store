@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-// import { AiFillMinusCircle, AiFillPlusCircle,AiOutlineShopping } from 'react-icons/ai';
+import { AiFillMinusCircle, AiFillPlusCircle,AiOutlineShopping } from 'react-icons/ai';
 
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 
-function Checkout({ cart , subTotal, removeFromCart, addToCart }) {
+function Checkout({cart , subTotal, removeFromCart, addToCart }) {
 
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -87,7 +87,7 @@ function Checkout({ cart , subTotal, removeFromCart, addToCart }) {
   <ToastContainer position="bottom-center" autoClose={1000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light"/>
 
   <section className="text-gray-600 body-font relative">
-    <div className="container px-5 mx-auto w-9/12">
+    <div className="container px-5 pt-10 mx-auto w-9/12">
       <div className="flex flex-col w-full mb-12">
         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">1.Delivery Details</h1>
         <p className="lg:w-2/3 leading-relaxed text-base">Whatever You Want, Whenever You Want You GOT!</p>

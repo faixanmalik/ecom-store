@@ -70,6 +70,7 @@ function Checkout({ cart , subTotal, removeFromCart, addToCart }) {
         setState('')
         setStreetAddress('')
         setZip('')
+        setProducts(cart)
 
         if (response.success === true) {
             toast.success(response.message , { position: "bottom-center", autoClose: 1000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "light", });

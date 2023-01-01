@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-// import { AiFillMinusCircle, AiFillPlusCircle,AiOutlineShopping } from 'react-icons/ai';
+import { AiFillMinusCircle, AiFillPlusCircle,AiOutlineShopping } from 'react-icons/ai';
 
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 
-function Checkout({ cart , subTotal, removeFromCart, addToCart }) {
+function Checkout({cart , subTotal, removeFromCart, addToCart }) {
 
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
